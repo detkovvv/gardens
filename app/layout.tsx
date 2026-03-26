@@ -13,13 +13,15 @@ const _playfair = Playfair_Display({
   variable: '--font-playfair',
 })
 
+const basePath = process.env.NODE_ENV === 'production' ? '/gardens' : ''
+
 export const metadata: Metadata = {
   title: 'Огороды - Клуб загородного огородничества',
   description: 'Премиальный клуб огородничества в 10 км от Краснодара. Собственный участок с полной инфраструктурой и агро-сервисом.',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: `${basePath}/icon-light-32x32.png`,
         media: '(prefers-color-scheme: light)',
       },
       {
